@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="ja">
 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>教員紹介</title>
+        <link href="./styles/kari_Studio.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="grid-containr">
+                <div class="studio">
+                    <div class="text_studio"><p>製品・サービスデザイン</p><p>スタジオ</p></div>
+                </div>
+                <div class="core">
+                    <div class="text_core">プロダクトデザインコア</div>
+                </div>
+                <div class="faculty">
+                    <div class="text_faculty">担当教員</div>
+                </div>
+                <div class="name">
+                    <div class="text_name">金　石振</div>
+                </div>
+                <div class="rank">
+                    <div class="text_rank">准教授</div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.slider').bxSlider({
+                        auto: true,
+                        pause: 5000,
+                    });
+                });
+            </script>
+        </header>
+
+        <main>
+            <div class="letter_body">
+                <p>本スタジオは、家電の未来をテーマに製品と空間の融合を目標に研究しています。造形芸術、科学技術、人文学などの幅広い分野と結びつく総合的な研究を指向し、これらと関連したモノづくりはもちろん、デザインの問題解決能力を備えることを目標とします。また、商品企画を始め、デザイン戦略、開発、生産に至るまでの全てのプロセスを理解、体験するなど意味のあるデザインイノベーション活動を通じ、モノの新しい価値を見つけ出すことを目指します。</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="slider">
+                <img src="./picture/es1.png" alt="">
+                <img src="./picture/es2.png" alt="">
+                <img src="./picture/es3.png" alt="">
+                <img src="./picture/es4.png" alt="">
+            </div>
+        </footer>
+
+    </body>
+
 </html>
