@@ -12,10 +12,11 @@
     font-weight: bold;
     font-size: 30px;
     color: #E80002;
-    /* line-height: 1; */
+    line-height: 200px;
     font-family: sans-serif;
     text-align: center;
-    vertical-align: central;
+    /* vertical-align: central; */
+    position: relative;
     /* padding-top:150px;
     padding-right:5px; */
 }
