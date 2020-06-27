@@ -1,6 +1,6 @@
 .grid-containr{
     display: grid;
-    grid-template: 100px 100px / 200px 10px 120px 120px 1fr;
+    grid-template: 100px 100px / 200px 10px 1fr;
 }
 .link_header{
     grid-row: 1 / 3;
@@ -17,6 +17,7 @@
     text-align: center;
     position: relative;
 }
+
 
 .link{
     display: flex;
@@ -35,7 +36,6 @@
             height:200px;
             box-shadow: 2px 2px 3px 0px #050505;
         }
-
     .right{
         order:2;
         margin-left: 10px;
