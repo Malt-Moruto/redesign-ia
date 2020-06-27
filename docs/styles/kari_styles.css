@@ -1,28 +1,59 @@
 
 body {
   font-family: sans-serif;
+  background-image: url(../picture/hinocan.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:screen;
 }
 h1, h2 {
   font-weight: 400;
   color: steelblue;
 }
-#studios > div {
-  margin: 1em 0;
-  padding: 0.5em;
-  background: #f8f8f8;
-  min-height: 3em;
+
+.tiles{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 160px;
+  justify-content: flex-start;
+
 }
-.studio-title {
+.studios {
+  position: relative;
+  background-color: white;
+  margin: 2px;
+  word-break: break-all;
+  flex-basis: 160px;
+  height: 160px;
+}
+.studios_text{
+  position: absolute;
   font-weight: bold;
+  font-size: 12px;
+  color: black;
+  line-height: 1.5;
+  text-align: start;
+  bottom: 2px;
+  margin-left: 6px;
 }
-.studio-title-en {
-  margin-left: 1em;
-  font-weight: 100;
-  opacity: 0.75;
+.studios_text p{
+  margin: 0.4em 0px;
 }
-pre#result {
-  background-color: #444;
-  color: #fff;
-  font-family: monospace;
-  font-size: 9px;
+.others {
+  position: relative;
+  background-color: #E80002;
+  margin: 2px;
+  flex-basis: 160px;
+  height: 160px;
+}
+.others_text{
+  position: absolute;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  line-height: 1.2;
+  text-align: start;
+  bottom: 0;
+  margin-left: 6px;
 }
