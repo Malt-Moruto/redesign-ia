@@ -1,0 +1,28 @@
+
+body {
+  font-family: sans-serif;
+}
+h1, h2 {
+  font-weight: 400;
+  color: steelblue;
+}
+#studios > div {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #f8f8f8;
+  min-height: 3em;
+}
+.studio-title {
+  font-weight: bold;
+}
+.studio-title-en {
+  margin-left: 1em;
+  font-weight: 100;
+  opacity: 0.75;
+}
+pre#result {
+  background-color: #444;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+}
