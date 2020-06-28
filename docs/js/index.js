@@ -49,13 +49,3 @@ const getData = async (endpoint) => {
 }
 
 getData(endpoint);
-
-
-// yamashitaお試し　無視してね⭐︎
-var $grid = $('.tiles'),   
-    emptyCells = [],
-    i;
-for (i = 0; i < $grid.find('.cell').length; i++) {
-    emptyCells.push($('<li>', { class: 'empty' }));
-}
-$grid.append(emptyCells);
