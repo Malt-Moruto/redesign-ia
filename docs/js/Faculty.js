@@ -94,10 +94,10 @@ const renderJson = (json) => {
      FacultyDiv.appendChild(FacultySpan); //imgのspan
      FacultySpan.appendChild(FacultyImg);
      FacultyDiv.appendChild(FacultyRightdiv);
-     FacultyRightDiv.appendChild(FacultyNameRankDiv);
-     FacultyNameRankDiv.appendChild(FacultyTitle);
-     FacultyNameRankDiv.appendChild(FacultyTitleEn);
-     FacultyRightdiv.appendChild(FacultyLink);
+      FacultyRightDiv.appendChild(FacultyNameRankDiv);
+         FacultyNameRankDiv.appendChild(FacultyTitle);
+         FacultyNameRankDiv.appendChild(FacultyTitleEn);
+      FacultyRightdiv.appendChild(FacultyLink);
      FacultyDiv.appendChild(FacultyNameReading);
      FacultyDiv.appendChild(FacultyStudio);
      FacultyDiv.appendChild(FacultyStudioEn);
