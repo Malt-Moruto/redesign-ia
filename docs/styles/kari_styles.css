@@ -14,6 +14,13 @@ header{
   #tmusd{
     grid-row: 1;
     grid-column: 2;
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+    line-height: 1;
+    text-align: start;
+    margin-left: 12px;
+    margin-top: 20px;
   }
   #ia{
     grid-row: 2;
@@ -24,7 +31,7 @@ header{
     line-height: 1;
     text-align: start;
     margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   header a {
     grid-row: 1;
@@ -39,26 +46,31 @@ body {
   background-position: center;
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:screen;
-  /* max-width: 1237px; */
 }
 main{
-  justify-content: center;
   margin: 2% 3%;
 }
 h1, h2 {
   font-weight: 400;
   color: steelblue;
 }
+#close{
+  position: relative;
+}
+
+ul{
+  padding: 0px;
+}
 
 li{
-  list-style-type: none;
+  list-style: none inside none;
+  justify-content: center;
 }
 
 .tiles{
   display: flex;
   flex-flow: row wrap;
   flex-basis: 160px;
-  /* justify-content: flex-start; */
   justify-content: center;
 }
 
@@ -66,7 +78,7 @@ li{
   position: relative;
   margin: 2px;
   word-break: break-all;
-  flex-basis: 160px;
+  /* flex-basis: 160px; */
   width: 160px;
   height: 160px;
 }
@@ -115,4 +127,34 @@ li{
   padding-top: 0;
   padding-bottom: 0;
   margin: 0px 2px;
+}
+
+article{
+  padding-top: 50px;
+}
+article h1{
+  text-align: center;
+}
+article p{
+  padding: 0 5%;
+  text-indent: 1em;
+}
+
+.img_1{
+  text-align: center;
+  width: 50%;
+  padding: 0 25%;
+}
+.img_2{
+  justify-content: center;
+  width: 95%;
+  padding: 20px 2.5%;
+}
+
+section{
+  text-align: center;
+}
+section a{
+  color: rgb(65, 65, 65);
+  font-size: 10px;
 }
