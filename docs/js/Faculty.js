@@ -7,24 +7,6 @@ let sheet = 'Faculty';
 //上のものを結合して一つのurlにする
 let endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
-/* const : class名 : スプレッドシートの列
-FacltyDiv : 'Faclty' (一番外側のdiv)
-  //FacltySpan(imgやリンクを入れ子にしたい時用の、spanを作るためだけの要素)
-  FacultyImg : 'img' : faculty-photo(写真)
-  FacrtyNameRankDiv : 'name-rank' (内容なし class名とdivだけ)
-    FacrtyRightDiv : 'right' (同上)
-      FacultyName : 'name' : f-faculty-ja(教授の名前日本語)
-      FacultyNameEn : 'name-en' : f-faculty-en(↑の英語)
-      FacultyRank : 'rank' : f-faculty-title-ja(教授、准教授とかいうやつ)
-      FacultyRankEn : 'rank-en' : f-faculty-title-en
-    facultyLinl : undifined : f-link(リンク、クラス名なし)
-  FacultyNameReading : 'name-reading' : f-faculty-en(教授の名前英語)
-  FacultyStudio : 'explanation' : f-studio-ja(スタジオ)
-  FacultyStudioEn : 'explanation-en' : f-studio-en
-  FacultyMajor : 'explanation' : major-ja(研究分野)
-  FacultyMajorEn : 'explanation-en' : major-en
-*/
-
 const renderJson = (json) => {
     const Facultys = json.records; 
     Facultys.forEach(Faculty => { 
