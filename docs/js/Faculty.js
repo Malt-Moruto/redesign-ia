@@ -29,9 +29,15 @@ const renderJson = (json) => {
     const Facultys = json.records; 
     Facultys.forEach(Faculty => { 
 
+    const ChangeLang = ()=>{
+      let selectLang = document.getElementById("lang");
+      return selectlang === "日本語"?'Ja':'En';
+    }
+    let lang= ChangeLang();
+
      const FacultyDiv = document.createElement('div');
 
-     const FacultySpan = document.createElement("span"); //モルトさんのHTMLでは全部divになってたけどコピペ元を踏襲して1行のものはspanにします 調整任せた
+     const FacultySpan = document.createElement("span"); 
 
      const FacultyImg = document.createElement("img");
      FacultyImg.className = 'img';
@@ -42,26 +48,16 @@ const renderJson = (json) => {
 
      const FacultyRightdiv = document.createElement("div");
      FacultyRightdiv.className = 'right';
-
-     //ここから<div class = 'right'>の中
+      //ここから<div class = 'right'>の中
       //ここから<div class = 'name-rank'>の中
      const FacultyName = document.createElement("span");
      FacultyName.className = 'name';
-     FacultyName.textContent = Faculty['f-faculty-ja'];
-
-     const FacultyNameEn = document.createElement("span");
-     FacultyNameEn.className = 'name-en';
-     FacultyNameEn.textContent = Faculty['f-faculty-en'];
+     FacultyName.textContent = Faculty[`f-faculty-${lang}`];
 
      const FacultyRank = document.createElement("span");
      FacultyRank.className = 'rank';
-     FacultyRank.textContent = Faculty['f-faculty-title-ja'];
-
-     const FacultyRankEn = document.createElement("span");
-     FacultyRankEn.className = 'rank-en';
-     FacultyRankEn.textContent = Faculty['f-faculty-title-en'];
+     FacultyRank.textContent = Faculty[`f-faculty-title-${lang}`];
       //</div> (calss = 'name-rank')
-    
      if (Faculty['f-rink']){//ここの処理クソ不安です f-rinkが true ==! null ならばってかいたつもり...........
         const FacultyLink = document.createElement("a")//クラス名なし
         FacultyLink.href = Faculty['f-link'];
@@ -74,20 +70,11 @@ const renderJson = (json) => {
 
      const FacultyStudio = document.createElement("span");
      FacultyStudio.classname = 'explanation';
-     FacultyStudio.textContent = 'スタジオ : '  + Faculty['f-studio-ja'];//これあってるかわからない！Faculty[]は文字列だよね....？
-
-
-     const FacultyStudioEn = document.createElement("span");
-     FacultyStudioEn.classname = 'explanation-en';
-     FacultyStudioEn.textContent = 'studio : ' + Faculty['f-studio-en'];
+     FacultyStudio.textContent = ((lang === 'Ja') ? 'スタジオ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
 
      const FacultyMajor = document.createElement("span");
      FacultyMajor.classname =  'explanation';
-     FacultyMajor.textContent = '研究分野 : '  + Faculty['major-ja'];
-
-     const FacultyMajorEn = document.createElement("span");
-     FacultyMajorEn.classname =  'explanation-en';
-     FacultyMajorEn.textContent = 'major : '  + Faculty['major-en'];
+     FacultyMajor.textContent = '研究分野 : '  + Faculty[`major-${lang}`];
 
 
      //ここまでconstに内容を入れただけ　ここからそれを出力する
@@ -96,13 +83,10 @@ const renderJson = (json) => {
      FacultyDiv.appendChild(FacultyRightdiv);
       FacultyRightDiv.appendChild(FacultyNameRankDiv);
          FacultyNameRankDiv.appendChild(FacultyTitle);
-         FacultyNameRankDiv.appendChild(FacultyTitleEn);
       FacultyRightdiv.appendChild(FacultyLink);
      FacultyDiv.appendChild(FacultyNameReading);
      FacultyDiv.appendChild(FacultyStudio);
-     FacultyDiv.appendChild(FacultyStudioEn);
      FacultyDiv.appendChild(FacultyMajor);
-     FacultyDiv.appendChild(FacultyMajorEn);
      document.getElementById('おまかせします').appendChild(FacultyDiv); 
    });
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);//**全然わからない 急なnull
