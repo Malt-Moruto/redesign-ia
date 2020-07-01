@@ -14,60 +14,49 @@ const renderJson = (json) => {
     }
     let lang= ChangeLang();
 
-  const linkGridDiv = document.createElement('div');
-  linkGridDiv.className = 'grid-containr';
-
-    const linkHederDiv = document.createElement('div');
-    linkHederDiv.className = 'link_header';
-
-    const linkTextDiv = document.createElement('div');
-    linkTextDiv.className = 'text_link';
+    const linkDiv =document.createElement('div');
+    linkDiv.className = 'link'
 
     const linkLeftDiv = document.createElement('div');
-    inkLeftDiv.className = 'left';
+    linkLeftDiv.className = 'left';
 
     const linkHref = document.createElement('a');
-    linkHref.href = Link[`name-${lang}`];
+    linkHref.href = Link['link'];
+
+    const lincImg = document.createElement("img");
+    linkImg.className = 'img';
+    linkImg.src = Link['photo'];
 
     const linkRighteDiv = document.createElement('div');
-    linkRightDiv.className = 'right';//ここまで
+    linkRightDiv.className = 'right';
 
-      const linkCore = document.createElement("span");
-      linkCore.className = 'text_core';
-      linkCore.textContent = link[`core-${lang}`];
+    const linkTitle = document.createElement("span");
+    linkTitle.className = 'title';
+    linkTitle.textContent = link[`name-${lang}`];
+    linkTitle.href = Link['link'];
 
-    const linkFacultyDiv = document.createElement('div');
-    linkFacultyDiv.className = 'faculty';
+    const linkEx = document.createElement('div');
+    linkEx.className = 'explanation';
 
-      const linkFaculty = document.createElement("span");
-      linkFaculty.className = 'text_faculty';
-      linkFaculty.textContent = ((lang === 'Ja')? '担当教員' : 'Faulty'); //あってるとは思うけどちょい不安
+    const linkVenue = document.createElement("p");
+    linkVenue.textContent = Link[`venue-${lang}`];
 
-    const linkNameDiv = document.createElement('div');//ここややこしい
-    linkNameDiv.className = 'name';
+    const linkDate = document.createElement("p");
+    linkDate.textContent = Link[`event-dates-${lang}`];
 
-      const linkName = document.createElement("span");
-      linkName.className = 'text_name';
-      linkName.textContent = link[`faculty-${lang}`];
+    const linkDetail = document.createElement('div');
+    linkDetail.className = 'detail';
+    linkDetail.textContent =Link[`description-${lang}`]
 
-    const linkRankDiv = document.createElement('div');
-    linkRankDiv.className = 'rank';
-
-      const linkRank = document.createElement("span");
-      linkRank.className = 'text_rank';
-      linkRank.textContent = link[`faculty-title-${lang}`];
-
-   linkGridDiv.appendChild(linkTitleDiv);
-     linkTitleDiv.appendChild(linkTitle);
-   linkGridDiv.appendChild(linkCoreDiv);
-     linkCoreDiv.appendChild(linkCore);
-   linkGridDiv.appendChild(linkFacultyDiv);
-     linkFacultyDiv.appendChild(linkFaculty);
-   linkGridDiv.appendChild(linkNameDiv);
-     linkNameDiv.appendChild(linkName);
-  linkGridDiv.appendChild(linkRankDiv);
-     linkRankDiv.appendChild(linkRank);
-   document.getElementById('links').appendChild(linkDiv);
+    linkDiv.appendChild(linkLeftDiv);
+    linkLeftDiv.appendChild(linkHref);
+    linkLeftDiv.appendChild(linkImg);
+    linkDiv.appendChild(linkRightDiv);
+    linkRightDiv.appendChild(linkTitle);
+    linkRightDiv.appendChild(linkEx);
+    linkEx.appendChild(linkVenue);
+    linkEx.appendChild(linkDate);
+    linkRightDiv.appendChild(linkDetail);
 
  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
