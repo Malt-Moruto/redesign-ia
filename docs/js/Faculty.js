@@ -54,7 +54,7 @@ const renderJson = (json) => {
 
      const FacultyStudio = document.createElement("div");
      FacultyStudio.className = 'explanation';
-     FacultyStudio.textContent = ((lang === 'ja') ? 'スタジオ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
+     FacultyStudio.textContent = ((lang === 'ja') ? 'スタジオ : ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
 
      const FacultyMajor = document.createElement("div");
      FacultyMajor.className =  'explanation';

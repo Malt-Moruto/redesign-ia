@@ -1,6 +1,6 @@
 .grid-containr{
     display: grid;
-    grid-template: 100px 100px / 200px 10px 1fr;
+    grid-template: 90px 90px / 180px 10px 1fr;
 }
 .link_header{
     grid-row: 1 / 3;
@@ -12,7 +12,7 @@
     font-weight: bold;
     font-size: 20px;
     color: #E80002;
-    line-height: 200px;
+    line-height: 180px;
     font-family: sans-serif;
     text-align: center;
     position: relative;
