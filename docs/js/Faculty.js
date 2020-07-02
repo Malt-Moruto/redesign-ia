@@ -62,8 +62,7 @@ const renderJson = (json) => {
 
 
      //ここまでconstに内容を入れただけ　ここからそれを出力する
-     FacultyDiv.appendChild(FacultySpan); //imgのspan
-     FacultySpan.appendChild(FacultyImg);
+     FacultyDiv.appendChild(FacultyImg); //imgのspan
      FacultyDiv.appendChild(FacultyRightdiv);
         FacultyRightdiv.appendChild(FacultyNameRankDiv);
           FacultyNameRankDiv.appendChild(FacultyName);

@@ -28,8 +28,8 @@ const renderJson = (json) => {
     linkImg.className = 'img';
     linkImg.src = link['photo'];
     const linkImgunderTitle = document.createElement("img");
-    linkImg.className = 'img';
-    linkImg.src = './picture/prof-link.svg';
+    linkImgunderTitle.className = 'img';
+    linkImgunderTitle.src = './picture/prof-link.svg';
 
     const linkRighteDiv = document.createElement('div');
     linkRighteDiv.className = 'right';
