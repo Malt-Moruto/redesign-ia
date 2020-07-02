@@ -44,15 +44,16 @@ body {
   background-image: url(../picture/hinocan.jpg);
   background-size: cover;
   background-position: center;
-  background-color:rgba(255,255,255,0.5);
-  background-blend-mode:screen;
+  background-color:rgba(235,235,255,0.7);
+  background-blend-mode:lighten;
 }
 main{
   margin: 2% 3%;
 }
 h1, h2 {
   font-weight: 400;
-  color: steelblue;
+  color: rgb(78, 146, 201);
+  text-shadow: 1px 1px 2px aliceblue;
 }
 #close{
   position: relative;
