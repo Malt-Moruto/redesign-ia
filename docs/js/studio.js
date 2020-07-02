@@ -21,7 +21,7 @@ const renderJson = (json,number) => {
     const studioTitleDiv = document.createElement('div');
     studioTitleDiv.className = 'studio';
 
-      const studioTitle = document.createElement("span");
+      const studioTitle = document.createElement("div");
       studioTitle.className = 'text_studio';
       studioTitle.textContent = `<p>${studio[`name-${lang}`]}</p>`;
 
