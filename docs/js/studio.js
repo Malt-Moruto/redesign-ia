@@ -6,6 +6,7 @@ let endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 //idが "studios" のものを探してそこにjsonのデータを格納する。 これはgetElementByIdの話？
 const renderJson = (json) => {
   const studios = json.records;
+  let studio = studios[""];
   studios.forEach(studio => {
 
 

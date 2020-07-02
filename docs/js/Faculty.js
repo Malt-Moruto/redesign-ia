@@ -18,6 +18,7 @@ const renderJson = (json) => {
     let lang= ChangeLang();
 
      const FacultyDiv = document.createElement('div');
+     FacultyDiv.className = 'faculty';
 
      const FacultySpan = document.createElement("span"); 
 
@@ -32,11 +33,11 @@ const renderJson = (json) => {
      FacultyRightdiv.className = 'right';
       //ここから<div class = 'right'>の中
       //ここから<div class = 'name-rank'>の中
-     const FacultyName = document.createElement("span");
+     const FacultyName = document.createElement("div");
      FacultyName.className = 'name';
      FacultyName.textContent = Faculty[`f-faculty-${lang}`];
 
-     const FacultyRank = document.createElement("span");
+     const FacultyRank = document.createElement("div");
      FacultyRank.className = 'rank';
      FacultyRank.textContent = Faculty[`f-faculty-title-${lang}`];
       //</div> (calss = 'name-rank')
@@ -47,7 +48,7 @@ const renderJson = (json) => {
      }
      //</div>(class = 'right')
 
-     const FacultyNameReading = document.createElement("span");
+     const FacultyNameReading = document.createElement("div");
      FacultyNameReading.classname = 'name-reading';//実質name-enと同じ いらなかったら消してください
      FacultyNameReading.textContent = Faculty['f-faculty-en'];
 
@@ -66,9 +67,10 @@ const renderJson = (json) => {
      FacultyDiv.appendChild(FacultyRightdiv);
         FacultyRightdiv.appendChild(FacultyNameRankDiv);
           FacultyNameRankDiv.appendChild(FacultyName);
-     FacultyDiv.appendChild(FacultyNameReading);
-     FacultyDiv.appendChild(FacultyStudio);
-     FacultyDiv.appendChild(FacultyMajor);
+          FacultyNameRankDiv.appendChild(FacultyRank);
+        FacultyRightdiv.appendChild(FacultyNameReading);
+        FacultyRightdiv.appendChild(FacultyStudio);
+        FacultyRightdiv.appendChild(FacultyMajor);
      document.getElementById('faculty_list').appendChild(FacultyDiv);
    });
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);//**全然わからない 急なnull
