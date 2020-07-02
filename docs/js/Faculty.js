@@ -9,12 +9,12 @@ let endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 
 const renderJson = (json) => {
     const Facultys = json.records; 
-    Facultys.forEach(Faculty => { 
+    Facultys.forEach(Faculty => {
 
-    const ChangeLang = ()=>{
-      let selectLang = document.getElementById("lang");
-      return selectlang === "日本語"?'Ja':'En';
-    }
+        const ChangeLang = ()=>{
+            let selectLang = document.documentElement.lang;
+            return selectlang === "ja"?'Ja':'En';
+        }
     let lang= ChangeLang();
 
      const FacultyDiv = document.createElement('div');

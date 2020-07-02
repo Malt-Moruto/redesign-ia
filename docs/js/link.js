@@ -9,8 +9,8 @@ const renderJson = (json) => {
   links.forEach(link => {
 
     const ChangeLang = ()=>{
-      let selectLang = document.getElementById("lang");
-      return selectlang === "日本語"?'Ja':'En';
+      let selectLang = document.documentElement.lang;
+      return selectlang === "ja"?'Ja':'En';
     }
     let lang= ChangeLang();
 

@@ -10,8 +10,8 @@ const renderJson = (json) => {
 
 
     const ChangeLang = ()=>{
-      let selectLang = HTMLElement.lang;
-      return selectlang === "日本語"?'Ja':'En';
+      let selectLang = document.documentElement.lang;
+      return selectlang === "ja"?'Ja':'En';
     }
     let lang= ChangeLang();
 
@@ -91,5 +91,9 @@ const getData = async (endpoint) => {
     console.log(error);
   }
 }
-
+const ChangeLang = ()=>{
+  let selectLang = document.documentElement.lang;
+  return selectLang;
+}
+console.log(ChangeLang());
 getData(endpoint).then(r => console.log(r));
