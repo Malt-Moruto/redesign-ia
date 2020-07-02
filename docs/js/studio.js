@@ -53,6 +53,10 @@ const renderJson = (json,number) => {
       studioRank.className = 'text_rank';
       studioRank.textContent = studio[`faculty-title-${lang}`];
 
+  const studioletter_body = document.createElement("p");
+  studioletter_body.textContent = studio[`description-${lang}`];
+
+
    studioGridDiv.appendChild(studioTitleDiv);
      studioTitleDiv.appendChild(studioTitle);
    studioGridDiv.appendChild(studioCoreDiv);
@@ -64,6 +68,7 @@ const renderJson = (json,number) => {
   studioGridDiv.appendChild(studioRankDiv);
      studioRankDiv.appendChild(studioRank);
    document.getElementById('studios').appendChild(studioGridDiv);
+   document.getElementById('letter_body').appendChild(studioletter_body);
    /*
    こんな感じのhtmlが生成されて差し込まれる。
    <div>
