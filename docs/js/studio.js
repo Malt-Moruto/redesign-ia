@@ -63,7 +63,7 @@ const renderJson = (json) => {
      studioNameDiv.appendChild(studioName);
   studioGridDiv.appendChild(studioRankDiv);
      studioRankDiv.appendChild(studioRank);
-   document.getElementById('studios').appendChild(studioDiv);
+   document.getElementById('studios').appendChild(studioGridDiv);
    /*
    こんな感じのhtmlが生成されて差し込まれる。
    <div>
@@ -91,9 +91,6 @@ const getData = async (endpoint) => {
     console.log(error);
   }
 }
-const ChangeLang = ()=>{
-  let selectLang = document.documentElement.lang;
-  return selectLang;
-}
+
 console.log(ChangeLang());
 getData(endpoint).then(r => console.log(r));

@@ -21,42 +21,42 @@ const renderJson = (json) => {
     linkLeftDiv.className = 'left';
 
     const linkHref = document.createElement('a');
-    linkHref.href = Link['link'];
+    linkHref.href = link['link'];
 
-    const lincImg = document.createElement("img");
+    const linkImg = document.createElement("img");
     linkImg.className = 'img';
-    linkImg.src = Link['photo'];
+    linkImg.src = link['photo'];
 
     const linkRighteDiv = document.createElement('div');
-    linkRightDiv.className = 'right';
+    linkRighteDiv.className = 'right';
 
     const linkTitle = document.createElement("span");
     linkTitle.className = 'title';
     linkTitle.textContent = link[`name-${lang}`];
-    linkTitle.href = Link['link'];
+    linkTitle.href = link['link'];
 
     const linkEx = document.createElement('div');
     linkEx.className = 'explanation';
 
     const linkVenue = document.createElement("p");
-    linkVenue.textContent = Link[`venue-${lang}`];
+    linkVenue.textContent = link[`venue-${lang}`];
 
     const linkDate = document.createElement("p");
-    linkDate.textContent = Link[`event-dates-${lang}`];
+    linkDate.textContent = link[`event-dates-${lang}`];
 
     const linkDetail = document.createElement('div');
     linkDetail.className = 'detail';
-    linkDetail.textContent =Link[`description-${lang}`]
+    linkDetail.textContent =link[`description-${lang}`]
 
     linkDiv.appendChild(linkLeftDiv);
     linkLeftDiv.appendChild(linkHref);
     linkLeftDiv.appendChild(linkImg);
-    linkDiv.appendChild(linkRightDiv);
-    linkRightDiv.appendChild(linkTitle);
-    linkRightDiv.appendChild(linkEx);
+    linkDiv.appendChild(linkRighteDiv);
+    linkRighteDiv.appendChild(linkTitle);
+    linkRighteDiv.appendChild(linkEx);
     linkEx.appendChild(linkVenue);
     linkEx.appendChild(linkDate);
-    linkRightDiv.appendChild(linkDetail);
+    linkRighteDiv.appendChild(linkDetail);
     document.getElementById('link_list').appendChild(linkDiv);
 
  });

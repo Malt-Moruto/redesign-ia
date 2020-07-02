@@ -43,6 +43,7 @@ const renderJson = (json) => {
      if (Faculty['f-rink']){//ここの処理クソ不安です f-rinkが true ==! null ならばってかいたつもり...........
         const FacultyLink = document.createElement("a")//クラス名なし
         FacultyLink.href = Faculty['f-link'];
+        FacultyRightdiv.appendChild(FacultyLink);
      }
      //</div>(class = 'right')
 
@@ -63,9 +64,8 @@ const renderJson = (json) => {
      FacultyDiv.appendChild(FacultySpan); //imgのspan
      FacultySpan.appendChild(FacultyImg);
      FacultyDiv.appendChild(FacultyRightdiv);
-      FacultyRightDiv.appendChild(FacultyNameRankDiv);
-         FacultyNameRankDiv.appendChild(FacultyTitle);
-      FacultyRightdiv.appendChild(FacultyLink);
+        FacultyRightdiv.appendChild(FacultyNameRankDiv);
+          FacultyNameRankDiv.appendChild(FacultyName);
      FacultyDiv.appendChild(FacultyNameReading);
      FacultyDiv.appendChild(FacultyStudio);
      FacultyDiv.appendChild(FacultyMajor);
