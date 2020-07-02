@@ -76,7 +76,12 @@ const renderJson = (json,number) => {
         <span class="studio-title-en">Interface Design Studio</span>
    </div>
    */
-
+  let slide_show = document.getElementById("slide-show");
+  let i;
+  for(i = 1;studio[`photo${i}`];i++){
+    slide_show.appendChild(`<img src=${studio[`photo${i}`]} style="position: ${i===1? "relative":(i-2)*4+"s"}">`);
+  }
+  slide_show.getElementsByTagName("img")[0].style.animation = `show ${(i-1)*4}s infinite`
 }
 //urlを受け取ってjsonにする。
 const getData = async (endpoint) => {
