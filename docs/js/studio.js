@@ -10,7 +10,7 @@ const renderJson = (json) => {
 
 
     const ChangeLang = ()=>{
-      let selectLang = document.getElementById("lang");
+      let selectLang = HTMLElement.lang;
       return selectlang === "日本語"?'Ja':'En';
     }
     let lang= ChangeLang();
@@ -80,15 +80,16 @@ const getData = async (endpoint) => {
   try{
     const response =  await fetch(endpoint);
     if(response.ok){
-			let jsonResponse = await response.json();
+      let jsonResponse = await response.json();
 			//jsonResponseに入っているデータのうち、最後のデータを削除する。
 			jsonResponse.records.pop();
 			renderJson(jsonResponse);
     }
+    console.log(response.ok);
   }
   catch(error){
     console.log(error);
   }
 }
 
-getData(endpoint);
+getData(endpoint).then(r => console.log(r));

@@ -15,7 +15,8 @@ const renderJson = (json) => {
    const studioTitle = document.createElement("span");
    studioTitle.className = 'studio-title';
    //グーグルスプレットシートのシートの"name-ja"列を取得。
-   studioTitle.textContent = studio['name-ja'];
+        let ja = "ja";
+   studioTitle.textContent = studio[`name-${ja}`];
    const studioTitleEn = document.createElement("span");
    studioTitleEn.className = 'studio-title-en';
    studioTitleEn.textContent = studio['name-en'];

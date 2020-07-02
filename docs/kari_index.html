@@ -1,150 +1,228 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
-        <link rel="stylesheet" href="styles/kari_styles.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
+    <link rel="stylesheet" href="styles/kari_styles.css">
+</head>
 
-    <body>
-        <header>
-            <a href="#ja">English</a>
-            <img src="http://placekitten.com/200/50" alt="都立大のロゴ" id="logo">
-            <div id="tmusd">東京都立大学システムデザイン学部</div>
-            <div id="ia">インダストリアルアート学科/学域</div>
-        </header>
+<body>
+<header>
+    <a href="#ja">English</a>
+    <img src="http://placekitten.com/200/50" alt="都立大のロゴ" id="logo">
+    <div id="tmusd">東京都立大学システムデザイン学部</div>
+    <div id="ia">インダストリアルアート学科/学域</div>
+</header>
+<iframe src="./kari_Studio.html"
+        width="80%"
+        height="0" id="topFrame">
+</iframe>
+<script type="text/javascript">
+    OpenPage = "";
+    ifanim = (thisPage) => {
+        console.log(`${thisPage}:${OpenPage}`);
+        if (OpenPage === thisPage) {
+            document.getElementById('topFrame').classList.remove("run-animation");
+            void document.getElementById('topFrame').offsetWidth;
+            document.getElementById('topFrame').classList.add("run-animation");
+            document.getElementById('topFrame').style.animationDirection = "reverse";
+            OpenPage = "";
+        } else if (OpenPage === "") {
+            document.getElementById('topFrame').classList.remove("run-animation");
+            void document.getElementById('topFrame').offsetWidth;
+            document.getElementById('topFrame').classList.add("run-animation");
+            document.getElementById('topFrame').style.animationDirection = "normal";
 
-        <main>
-            <a href="index.html#ja" id="close" hreflang="ja">×</a>
-            <ul class="tiles">
-                <li class="cell"> 
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>エディティング</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>製品・サービスデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>エルゴノミックデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>インタラクティブアート</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>インタフェースデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>インテリアデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" reflang="ja">
-                        <div class="studios_text"><p>映像デザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>ネットワークデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>ソフトウェアデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>空間デザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>トランスポーテーションデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="studio.html#ja" class ="studio" hreflang="ja">
-                        <div class="studios_text"><p>ヴィジュアルコミュニケーションデザイン</p><p>スタジオ</p></div>
-                    </a>
-                </li>
-                <li class="cell">
-                    <a href="Faculty.html#ja" class="other" hreflang="ja"><div class="others_text"><p>教員一覧</p></div><a>
-                </li>
-                <li class="cell">
-                    <a href="link.html#ja" class="other" hreflang="ja"><div class="others_text"><p>リンク</p></div></a>
-                </li>
-                <li class="cell">
-                    <a href="Access.html#ja" class="other" hreflang="ja"><div class="others_text"><p>アクセス</p></div></a>
-                </li>
-                <li class="empty"></li>
-                <li class="empty"></li>
-                <li class="empty"></li>
-                <li class="empty"></li>
-                <li class="empty"></li>
-                <li class="empty"></li>
-            </div>
-            <article>
-                <h1 lang="ja">工学の基盤と文化的基盤の統合から生まれる新しい研究</h1>
-                <picture>
-                    <img src="http://placekitten.com/800/500" class="img_1" alt="適当な写真">
-                </picture>
-                <p lang="ja">システムデザイン研究科インダストリアルアート学域では、これまでの工学的かつ文化的な基盤をひとつにすることで、
-                    現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディア創生」の2つの研究分野から図っています。
-                    「プロダクトデザイン」は、交通機関、家電製品、工業製品、家具、住空間、公共空間などのデザインや人間工学など、人と環境の双方からのアプローチでものづくりを展開しています。
-                    「メディア創生」は、グラフィック、先端メディア、テクノロジーおよびデザイン、アートにかかわる革新的なモノやコトを創出しています。
-                </p>
-            </article>
-            <article>
-                <h1 lang="ja">2つのコア・分野、12のスタジオによる構成</h1>
-                <p lang="ja">インダストリアルアート学科・学域は、「プロダクトデザイン」と「メディア創生」の2つのコア・分野を柱に、12のスタジオで構成されています。
-                    各スタジオが扱う専門領域は新しいものづくりと情報メディアにまたがって多様に連携しながら、それぞれが最先端の研究を推進し、新しい価値の創造を展開していきます。</p>
-            </article>
-            <article>
-                <h1 lang="ja">現代社会が求める幅広い知見をもったデザイナーの育成</h1>
-                <p lang="ja">
-                    本学科·学域は、理工系学部·研究科の中にあるデザインコースとして、
-                    またプロダクト系とメディア系の幅広いデザイン分野が共存する学科として世界的にも非常にユニークな存在といえます。
-                    この特色を最大限活かし、美術系大学など他大学のデザイン系学科とは一線を画した独自の人材を育成します。
-                    デザインとはただ形を作るにとどまらず、コンセプト提案、しくみ構築機能の調整統合など、
-                    新しいモノやコトを生み出す作業における上流段階での重要な役割を担うものであるとの位置づけから、
-                    デザイナーには専門職的なアプローチのみならず、ものづくりの指揮官の役割が社会から期待されるようになっています。
-                    このような社会の要請に応えられる新しいタイプのデザイナーおよびそれに関わる研究者の育成を目指します。
-                    そのために、学生には専門分野だけにとどまらず、学科の特色を活かし、理工系から人文·社会系まで、プロダクト系からメディア系まで、
-                    幅広い領域に対する興味と知見を有し、それらを総動員して新しいタイプのデザインを創生する人材を育成します。教育体制は、
-                    学部の4年間でさまざまな幅広い分野の学問や知見を吸収し、大学院でその幅の広さを活かしながら専門性を高めて深化させていきます。</p>
-            </article>
-            <article>
-                <h1 lang="ja">履修モデル</h1>
-                <picture>
-                    <img src="http://industrial-art.sd.tmu.ac.jp/images/about-images/courcemodel2_3-01.png" class="img_2" alt="履修の写真">
-                </picture>
-                <picture>
-                    <img src="http://industrial-art.sd.tmu.ac.jp/images/about-images/courcemodel2_3-02.png" class="img_2" alt="履修の写真2">
-                </picture>
-            </article>
-        </main>
+            OpenPage = thisPage;
+        } else {
+            OpenPage = thisPage;
+        }
+    }
+</script>
+<style type="text/css">
 
-        <footer>
-            <div id="footerlink">
-                <section>
-                    <a href="https://www.sd.tmu.ac.jp/" hreflang="ja">東京都立大学 システムデザイン学部／研究科</a>
-                    <a class="copyright" href="https://www.tmu.ac.jp/" hreflang="ja">Copyright ©2018 Tokyo
-                        Metropolitan University. All rights reserved.</a>
-                </section>
-            </div>
-        </footer>
+    #topFrame {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.70);
+        border-radius: 20px;
+    }
 
-        <script src="js/index.js"></script>
-    </body>
+    .run-animation {
+        display: block;
+        margin: auto;
+        animation: iframeanim 1s running forwards;
+    }
+
+    @keyframes iframeanim {
+        0% {
+            height: 0px;
+        }
+        100% {
+            height: 1000px;
+        }
+    }
+
+</style>
+<main>
+    <a href="index.html" id="close">×</a>
+    <ul class="tiles">
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>エディティング</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>製品・サービスデザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>エルゴノミックデザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>インタラクティブアート</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>インタフェースデザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>インテリアデザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" reflang="ja">
+                <div class="studios_text"><p>映像デザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <a href="studio.html#ja" class="studio" hreflang="ja">
+                <div class="studios_text"><p>ネットワークデザイン</p>
+                    <p>スタジオ</p></div>
+            </a>
+        </li>
+        <li class="cell">
+            <button class="studio" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Studio.html'; ifanim('kari_Studio');">
+                <div class="studios_text"><p>ソフトウェアデザイン</p>
+                    <p>スタジオ</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="studio" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Studio.html'; ifanim('kari_Studio');">
+                <div class="studios_text"><p>空間デザイン</p>
+                    <p>スタジオ</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="studio" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Studio.html'; ifanim('kari_Studio');">
+                <div class="studios_text"><p>トランスポーテーションデザイン</p>
+                    <p>スタジオ</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="studio" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Studio.html'; ifanim('kari_Studio');">
+                <div class="studios_text"><p>ヴィジュアルコミュニケーションデザイン</p>
+                    <p>スタジオ</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="other" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Faculty.html'; ifanim('kari_Faculty');">
+                <div class="others_text"><p>教員一覧</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="other" type="button"
+                    onclick="document.getElementById('topFrame').src = './kari_Link.html'; ifanim('kari_Link');">
+                <div class="others_text"><p>リンク</p></div>
+            </button>
+        </li>
+        <li class="cell">
+            <button class="other" type="button"
+                    onclick="document.getElementById('topFrame').src = './Access.html'; ifanim('Access');">
+                <div class="others_text"><p>アクセス</p></div>
+            </button>
+        </li>
+        <li class="empty"></li>
+        <li class="empty"></li>
+        <li class="empty"></li>
+        <li class="empty"></li>
+        <li class="empty"></li>
+        <li class="empty"></li>
+    </ul>
+    <article>
+        <h1 lang="ja">工学の基盤と文化的基盤の統合から生まれる新しい研究</h1>
+        <picture>
+            <img src="http://placekitten.com/800/500" class="img_1" alt="適当な写真">
+        </picture>
+        <p lang="ja">システムデザイン研究科インダストリアルアート学域では、これまでの工学的かつ文化的な基盤をひとつにすることで、
+            現代社会の新たなデザイン·アート領域の研究者や創造·研究·実践の担い手の育成を、「プロダクトデザイン」と「メディア創生」の2つの研究分野から図っています。
+            「プロダクトデザイン」は、交通機関、家電製品、工業製品、家具、住空間、公共空間などのデザインや人間工学など、人と環境の双方からのアプローチでものづくりを展開しています。
+            「メディア創生」は、グラフィック、先端メディア、テクノロジーおよびデザイン、アートにかかわる革新的なモノやコトを創出しています。
+        </p>
+    </article>
+    <article>
+        <h1 lang="ja">2つのコア・分野、12のスタジオによる構成</h1>
+        <p lang="ja">インダストリアルアート学科・学域は、「プロダクトデザイン」と「メディア創生」の2つのコア・分野を柱に、12のスタジオで構成されています。
+            各スタジオが扱う専門領域は新しいものづくりと情報メディアにまたがって多様に連携しながら、それぞれが最先端の研究を推進し、新しい価値の創造を展開していきます。</p>
+    </article>
+    <article>
+        <h1 lang="ja">現代社会が求める幅広い知見をもったデザイナーの育成</h1>
+        <p lang="ja">
+            本学科·学域は、理工系学部·研究科の中にあるデザインコースとして、
+            またプロダクト系とメディア系の幅広いデザイン分野が共存する学科として世界的にも非常にユニークな存在といえます。
+            この特色を最大限活かし、美術系大学など他大学のデザイン系学科とは一線を画した独自の人材を育成します。
+            デザインとはただ形を作るにとどまらず、コンセプト提案、しくみ構築機能の調整統合など、
+            新しいモノやコトを生み出す作業における上流段階での重要な役割を担うものであるとの位置づけから、
+            デザイナーには専門職的なアプローチのみならず、ものづくりの指揮官の役割が社会から期待されるようになっています。
+            このような社会の要請に応えられる新しいタイプのデザイナーおよびそれに関わる研究者の育成を目指します。
+            そのために、学生には専門分野だけにとどまらず、学科の特色を活かし、理工系から人文·社会系まで、プロダクト系からメディア系まで、
+            幅広い領域に対する興味と知見を有し、それらを総動員して新しいタイプのデザインを創生する人材を育成します。教育体制は、
+            学部の4年間でさまざまな幅広い分野の学問や知見を吸収し、大学院でその幅の広さを活かしながら専門性を高めて深化させていきます。</p>
+    </article>
+    <article>
+        <h1 lang="ja">履修モデル</h1>
+        <picture>
+            <img src="http://industrial-art.sd.tmu.ac.jp/images/about-images/courcemodel2_3-01.png" class="img_2"
+                 alt="履修の写真">
+        </picture>
+        <picture>
+            <img src="http://industrial-art.sd.tmu.ac.jp/images/about-images/courcemodel2_3-02.png" class="img_2"
+                 alt="履修の写真2">
+        </picture>
+    </article>
+</main>
+
+<footer>
+    <div id="footerlink">
+        <section>
+            <a href="https://www.sd.tmu.ac.jp/" hreflang="ja">東京都立大学 システムデザイン学部／研究科</a>
+            <a class="copyright" href="https://www.tmu.ac.jp/" hreflang="ja">Copyright ©2018 Tokyo
+                Metropolitan University. All rights reserved.</a>
+        </section>
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
 
 </html>

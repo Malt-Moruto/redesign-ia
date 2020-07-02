@@ -57,6 +57,7 @@ const renderJson = (json) => {
     linkEx.appendChild(linkVenue);
     linkEx.appendChild(linkDate);
     linkRightDiv.appendChild(linkDetail);
+    document.getElementById('link_list').appendChild(linkDiv);
 
  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);

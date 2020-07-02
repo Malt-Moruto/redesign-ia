@@ -69,7 +69,7 @@ const renderJson = (json) => {
      FacultyDiv.appendChild(FacultyNameReading);
      FacultyDiv.appendChild(FacultyStudio);
      FacultyDiv.appendChild(FacultyMajor);
-     document.getElementById('おまかせします').appendChild(FacultyDiv); 
+     document.getElementById('faculty_list').appendChild(FacultyDiv);
    });
     document.getElementById('result').textContent = JSON.stringify(json, null, 2);//**全然わからない 急なnull
   }
