@@ -68,7 +68,7 @@ const renderJson = (json,number) => {
   studioGridDiv.appendChild(studioRankDiv);
      studioRankDiv.appendChild(studioRank);
    document.getElementById('studios').appendChild(studioGridDiv);
-   document.getElementById('letter_body').appendChild(studioletter_body);
+   document.getElementsByClassName('letter_body')[0].appendChild(studioletter_body);
    /*
    こんな感じのhtmlが生成されて差し込まれる。
    <div>
@@ -80,7 +80,9 @@ const renderJson = (json,number) => {
   let i;
   for(i = 1;studio[`photo${i}`];i++){
     slide_show.appendChild(`<img src=${studio[`photo${i}`]} style="position: ${i===1? "relative":(i-2)*4+"s"}">`);
+    console.log(i);
   }
+  console.log(studio[`photo${i}`]);
   slide_show.getElementsByTagName("img")[0].style.animation = `show ${(i-1)*4}s infinite`
 }
 //urlを受け取ってjsonにする。
