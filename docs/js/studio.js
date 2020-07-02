@@ -92,5 +92,4 @@ const getData = async (endpoint) => {
   }
 }
 
-console.log(ChangeLang());
 getData(endpoint).then(r => console.log(r));
