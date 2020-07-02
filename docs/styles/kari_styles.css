@@ -89,6 +89,7 @@ li{
   word-break: break-all;
   width: 160px;
   height: 160px;
+  border: none;
 }
 .studios_text{
   position: absolute;
@@ -110,6 +111,7 @@ li{
   word-break: break-all;
   width: 160px;
   height: 160px;
+  border: none;
 }
 .others_text{
   position: absolute;

@@ -2,12 +2,11 @@ const uri = 'https://script.google.com/macros/s/AKfycbxyacpN8y4nxSAnU0Eji6E_rBRD
 const id = '1BpGnuwC4lZf9G2yFyiSrxbJuGO8gviV8mr-I2D3x4vA';
 let sheet = 'Studio';
 let endpoint = `${uri}?id=${id}&sheet=${sheet}`;
-
+let jsonResponse;
 //idが "studios" のものを探してそこにjsonのデータを格納する。 これはgetElementByIdの話？
-const renderJson = (json) => {
+const renderJson = (json,number) => {
   const studios = json.records;
-  let studio = studios[""];
-  studios.forEach(studio => {
+  let studio = studios[number];
 
 
     const ChangeLang = ()=>{
@@ -73,17 +72,16 @@ const renderJson = (json) => {
    </div>
    */
 
- });
 }
 //urlを受け取ってjsonにする。
 const getData = async (endpoint) => {
   try{
     const response =  await fetch(endpoint);
     if(response.ok){
-      let jsonResponse = await response.json();
+      jsonResponse = await response.json();
 			//jsonResponseに入っているデータのうち、最後のデータを削除する。
 			jsonResponse.records.pop();
-			renderJson(jsonResponse);
+			renderJson(jsonResponse,location.search.substring(1));
     }
     console.log(response.ok);
   }
@@ -91,5 +89,11 @@ const getData = async (endpoint) => {
     console.log(error);
   }
 }
+if(jsonResponse){
+  renderJson(jsonResponse,location.search.substring(1));
+}else{
+  getData(endpoint).then(r => console.log(r));
+}
 
-getData(endpoint).then(r => console.log(r));
+let url=location.search.substring(1);
+console.log(url);
