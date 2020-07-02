@@ -22,10 +22,14 @@ const renderJson = (json) => {
 
     const linkHref = document.createElement('a');
     linkHref.href = link['link'];
-
+    const linkHrefunderText = document.createElement('a');
+    linkHref.href = link['link'];
     const linkImg = document.createElement("img");
     linkImg.className = 'img';
     linkImg.src = link['photo'];
+    const linkImgunderTitle = document.createElement("img");
+    linkImg.className = 'img';
+    linkImg.src = './picture/prof-link.svg';
 
     const linkRighteDiv = document.createElement('div');
     linkRighteDiv.className = 'right';
@@ -50,9 +54,11 @@ const renderJson = (json) => {
 
     linkDiv.appendChild(linkLeftDiv);
     linkLeftDiv.appendChild(linkHref);
-    linkLeftDiv.appendChild(linkImg);
+    linkHref.appendChild(linkImg);
     linkDiv.appendChild(linkRighteDiv);
     linkRighteDiv.appendChild(linkTitle);
+    linkTitle.appendChild(linkHrefunderText);
+    linkHrefunderText.appendChild(linkImgunderTitle);
     linkRighteDiv.appendChild(linkEx);
     linkEx.appendChild(linkVenue);
     linkEx.appendChild(linkDate);

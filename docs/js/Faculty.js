@@ -27,7 +27,7 @@ const renderJson = (json) => {
      FacultyImg.src = Faculty['faculty-photo'];//ここもしかしたらリンクに　"　がないせいでエラー出るかも
 
      const FacultyNameRankDiv = document.createElement("div"); //ここdivにしたけどおかしくなったらごめん〜〜〜〜調整頼む〜〜〜
-     FacultyNameRankDiv.classname = 'name-rank';
+     FacultyNameRankDiv.className = 'name-rank';
 
      const FacultyRightdiv = document.createElement("div");
      FacultyRightdiv.className = 'right';
@@ -49,15 +49,15 @@ const renderJson = (json) => {
      //</div>(class = 'right')
 
      const FacultyNameReading = document.createElement("div");
-     FacultyNameReading.classname = 'name-reading';//実質name-enと同じ いらなかったら消してください
+     FacultyNameReading.className = 'name-reading';//実質name-enと同じ いらなかったら消してください
      FacultyNameReading.textContent = Faculty['f-faculty-en'];
 
      const FacultyStudio = document.createElement("span");
-     FacultyStudio.classname = 'explanation';
+     FacultyStudio.className = 'explanation';
      FacultyStudio.textContent = ((lang === 'Ja') ? 'スタジオ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
 
      const FacultyMajor = document.createElement("span");
-     FacultyMajor.classname =  'explanation';
+     FacultyMajor.className =  'explanation';
      FacultyMajor.textContent = '研究分野 : '  + Faculty[`major-${lang}`];
 
 
