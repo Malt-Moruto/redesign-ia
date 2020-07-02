@@ -23,12 +23,12 @@ const renderJson = (json) => {
     const linkHref = document.createElement('a');
     linkHref.href = link['link'];
     const linkHrefunderText = document.createElement('a');
-    linkHref.href = link['link'];
+    linkHrefunderText.href = link['link'];
     const linkImg = document.createElement("img");
     linkImg.className = 'img';
     linkImg.src = link['photo'];
     const linkImgunderTitle = document.createElement("img");
-    linkImgunderTitle.className = 'img';
+    linkImgunderTitle.className = 'plof-link';
     linkImgunderTitle.src = './picture/prof-link.svg';
 
     const linkRighteDiv = document.createElement('div');

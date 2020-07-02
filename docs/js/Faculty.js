@@ -52,11 +52,11 @@ const renderJson = (json) => {
      FacultyNameReading.className = 'name-reading';//実質name-enと同じ いらなかったら消してください
      FacultyNameReading.textContent = Faculty['f-faculty-en'];
 
-     const FacultyStudio = document.createElement("span");
+     const FacultyStudio = document.createElement("div");
      FacultyStudio.className = 'explanation';
-     FacultyStudio.textContent = ((lang === 'Ja') ? 'スタジオ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
+     FacultyStudio.textContent = ((lang === 'ja') ? 'スタジオ' : 'studio') + Faculty[`f-studio-${lang}`];//これあってるかわからない！Faculty[]は文字列だよね....？
 
-     const FacultyMajor = document.createElement("span");
+     const FacultyMajor = document.createElement("div");
      FacultyMajor.className =  'explanation';
      FacultyMajor.textContent = '研究分野 : '  + Faculty[`major-${lang}`];
 
