@@ -13,7 +13,7 @@ const renderJson = (json) => {
 
         const ChangeLang = ()=>{
             let selectLang = document.documentElement.lang;
-            return selectlang === "ja"?'Ja':'En';
+            return selectLang === "ja"?'Ja':'En';
         }
     let lang= ChangeLang();
 
