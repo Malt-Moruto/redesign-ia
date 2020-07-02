@@ -83,15 +83,14 @@
     padding: 5px 20px;
 }
 
-div.slide-show {
+div#slide-show {
     width: 640px; /* スライドショーの幅 */
     max-width: 100%; /* スマホで表示が欠けないように */
     margin: 10px auto; /* 中央揃え */
     position: relative;
 }
 
-.slide-show img {
-    animation: show 12s infinite; /* 12秒のスライドショーを繰り返し */
+#slide-show img {
     max-width: 100%;
     height: 100%;
     opacity: 0;

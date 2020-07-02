@@ -23,33 +23,35 @@ const renderJson = (json,number) => {
 
       const studioTitle = document.createElement("div");
       studioTitle.className = 'text_studio';
-      studioTitle.textContent = `<p>${studio[`name-${lang}`]}</p>`;
+      const ptag = document.createElement("p");
+      studioTitle.appendChild(ptag);
+      ptag.textContent= studio[`name-${lang}`];
 
     const studioCoreDiv = document.createElement('div');
     studioCoreDiv.className = 'core';
 
-      const studioCore = document.createElement("span");
+      const studioCore = document.createElement("div");
       studioCore.className = 'text_core';
       studioCore.textContent = studio[`core-${lang}`];
 
     const studioFacultyDiv = document.createElement('div');
     studioFacultyDiv.className = 'faculty';
 
-      const studioFaculty = document.createElement("span");
+      const studioFaculty = document.createElement("div");
       studioFaculty.className = 'text_faculty';
-      studioFaculty.textContent = ((lang === 'Ja')? '担当教員' : 'Faulty'); //あってるとは思うけどちょい不安
+      studioFaculty.textContent = ((lang === 'ja')? '担当教員' : 'Faculty'); //あってるとは思うけどちょい不安
 
     const studioNameDiv = document.createElement('div');//ここややこしい
     studioNameDiv.className = 'name';
 
-      const studioName = document.createElement("span");
+      const studioName = document.createElement("div");
       studioName.className = 'text_name';
       studioName.textContent = studio[`faculty-${lang}`];
 
     const studioRankDiv = document.createElement('div');
     studioRankDiv.className = 'rank';
 
-      const studioRank = document.createElement("span");
+      const studioRank = document.createElement("div");
       studioRank.className = 'text_rank';
       studioRank.textContent = studio[`faculty-title-${lang}`];
 
@@ -79,11 +81,19 @@ const renderJson = (json,number) => {
   let slide_show = document.getElementById("slide-show");
   let i;
   for(i = 1;studio[`photo${i}`];i++){
-    slide_show.appendChild(`<img src=${studio[`photo${i}`]} style="position: ${i===1? "relative":(i-2)*4+"s"}">`);
+    let img = document.createElement("img");
+    img.src = studio[`photo${i}`];
+    img.style.position = i===1? "relative":"absolute";
+    slide_show.appendChild(img);
     console.log(i);
   }
+  for(let j = 0;j<i-1;j++){
+    slide_show.getElementsByTagName("img")[j].style.animation = `show ${(i-2)*4}s infinite`;
+    if(j !==0){
+      slide_show.getElementsByTagName("img")[j].style.animationDelay = `${((j-1)*4)}s`;
+    }
+  }
   console.log(studio[`photo${i}`]);
-  slide_show.getElementsByTagName("img")[0].style.animation = `show ${(i-1)*4}s infinite`
 }
 //urlを受け取ってjsonにする。
 const getData = async (endpoint) => {
