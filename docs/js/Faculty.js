@@ -13,7 +13,7 @@ const renderJson = (json) => {
 
         const ChangeLang = ()=>{
             let selectLang = document.documentElement.lang;
-            return selectLang === "ja"?'Ja':'En';
+            return selectLang === "ja"?'ja':'en';
         }
     let lang= ChangeLang();
 
@@ -73,7 +73,6 @@ const renderJson = (json) => {
         FacultyRightdiv.appendChild(FacultyMajor);
      document.getElementById('faculty_list').appendChild(FacultyDiv);
    });
-    document.getElementById('result').textContent = JSON.stringify(json, null, 2);//**全然わからない 急なnull
   }
   //urlを受け取ってjsonにする。 //ここから下いじってません
   const getData = async (endpoint) => {

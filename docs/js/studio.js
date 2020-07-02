@@ -12,7 +12,7 @@ const renderJson = (json) => {
 
     const ChangeLang = ()=>{
       let selectLang = document.documentElement.lang;
-      return selectLang === "ja"?'Ja':'En';
+      return selectLang === "ja"?'ja':'en';
     }
     let lang= ChangeLang();
 
@@ -74,7 +74,6 @@ const renderJson = (json) => {
    */
 
  });
-  document.getElementById('result').textContent = JSON.stringify(json, null, 2);
 }
 //urlを受け取ってjsonにする。
 const getData = async (endpoint) => {
