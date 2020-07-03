@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>東京都立大学システムデザイン学部インダストリアルアート学科</title>
@@ -19,6 +19,7 @@
 </iframe>
 <script type="text/javascript">
     OpenPage = "";
+    console.log(document.getElementsByTagName("iframe")[0].contentDocument.firstElementChild);
     ifanim = (thisPage) => {
         console.log(`${thisPage}:${OpenPage}`);
         if (OpenPage === thisPage) {

@@ -81,17 +81,25 @@ const renderJson = (json,number) => {
   let slide_show = document.getElementById("slide-show");
   let i;
   for(i = 1;studio[`photo${i}`];i++){
-    let img = document.createElement("img");
-    img.src = studio[`photo${i}`];
-    img.style.position = i===1? "relative":"absolute";
-    slide_show.appendChild(img);
     console.log(i);
   }
-  for(let j = 0;j<i-1;j++){
-    slide_show.getElementsByTagName("img")[j].style.animation = `show ${(i-2)*4}s infinite`;
-    if(j !==0){
-      slide_show.getElementsByTagName("img")[j].style.animationDelay = `${((j-1)*4)}s`;
+  if(i>3){
+    for(let j = 0;j<i-1;j++){
+      let img = document.createElement("img");
+      img.src = studio[`photo${j+1}`];
+      img.style.position = j===0? "relative":"absolute";
+      slide_show.appendChild(img);
+      img.style.animation = `show ${(i-2)*4}s infinite`;
+      if(j !==0){
+        img.style.animationDelay = `${((j-1)*4)}s`;
+      }
     }
+  }else{
+    let img = document.createElement("img");
+    img.src = studio[`photo${1}`];
+    img.style.position = "relative";
+    img.style.opacity = 1;
+    slide_show.appendChild(img);
   }
   console.log(studio[`photo${i}`]);
 }
