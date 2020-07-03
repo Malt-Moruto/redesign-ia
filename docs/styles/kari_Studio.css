@@ -84,9 +84,9 @@
 }
 
 div#slide-show {
-    width: 640px; /* スライドショーの幅 */
-    max-width: 100%; /* スマホで表示が欠けないように */
-    /* height: 400px; */
+    width: 70%; /* スライドショーの幅 */
+    max-width: 640px; /* スマホで表示が欠けないように */
+    height: 100%;
     padding-top: 0;
     margin: 10px auto; /* 中央揃え */
     text-align: center;
