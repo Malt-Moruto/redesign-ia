@@ -24,11 +24,11 @@
 .text_core{
     font-weight: bold;
     font-size: 14px;
-    color: black;
+    color: rgb(99, 99, 99);
     line-height: 1;
     font-family: sans-serif;
     text-align: start;
-    padding-top: 100px;
+    padding-top: 120px;
     padding-left:15px;
 }
 .faculty{
@@ -42,7 +42,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: end;
-    padding-top:62px;
+    padding-top:67px;
     padding-left:0px;
 }
 .name{
@@ -56,7 +56,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: center;
-    padding-top:57px;
+    padding-top:62px;
     padding-left:0px;
 }
 .rank{
@@ -70,7 +70,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: start;
-    padding-top:62px;
+    padding-top:67px;
     padding-left:0px;
 }
 
