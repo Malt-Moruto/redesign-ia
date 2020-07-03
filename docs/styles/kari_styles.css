@@ -4,7 +4,7 @@ header{
   font-family: sans-serif;
   margin-left: 20px;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
   #logo{
@@ -47,7 +47,7 @@ body {
   background-image: url(../picture/hinocan.jpg);
   background-size: cover;
   background-position: center;
-  background-color:rgba(235,235,255,0.7);
+  background-color:rgb(115, 180, 255);
   background-blend-mode:lighten;
 }
 main{
@@ -146,6 +146,7 @@ article p{
   padding: 0 5%;
   text-indent: 1em;
   color: rgb(29, 29, 29);
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 
 .img_1{

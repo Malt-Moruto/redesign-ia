@@ -1,6 +1,6 @@
 .grid-containr{
     display: grid;
-    grid-template: 90px 90px / 180px 10px 90px 200px 1fr;
+    grid-template: 90px 90px / 180px 20px 90px 200px 1fr;
 }
 .studio{
     grid-row: 1 / 3;
@@ -19,17 +19,17 @@
 }
 .core{
     grid-row: 1;
-    grid-column: 3 / 6;
+    grid-column: 3 / 5;
 }
 .text_core{
     font-weight: bold;
-    font-size: 25px;
+    font-size: 14px;
     color: black;
     line-height: 1;
     font-family: sans-serif;
     text-align: start;
-    padding-top: 90px;
-    padding-left:0px;
+    padding-top: 100px;
+    padding-left:15px;
 }
 .faculty{
     grid-row: 2;
@@ -42,7 +42,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: end;
-    padding-top:72px;
+    padding-top:62px;
     padding-left:0px;
 }
 .name{
@@ -56,7 +56,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: center;
-    padding-top:67px;
+    padding-top:57px;
     padding-left:0px;
 }
 .rank{
@@ -70,7 +70,7 @@
     line-height: 1;
     font-family: sans-serif;
     text-align: start;
-    padding-top:72px;
+    padding-top:62px;
     padding-left:0px;
 }
 
@@ -86,13 +86,18 @@
 div#slide-show {
     width: 640px; /* スライドショーの幅 */
     max-width: 100%; /* スマホで表示が欠けないように */
+    /* height: 400px; */
+    padding-top: 0;
     margin: 10px auto; /* 中央揃え */
+    text-align: center;
     position: relative;
+    object-fit: cover;
 }
 
 #slide-show img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
     opacity: 0;
     position: absolute; /* 画像を重ねて表示 */
     left: 0;
